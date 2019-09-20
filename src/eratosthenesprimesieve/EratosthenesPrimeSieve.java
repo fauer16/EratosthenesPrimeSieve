@@ -19,10 +19,21 @@ public class EratosthenesPrimeSieve {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        showmenue();
+
+    }
+
+    public static void showmenue() {
+        
+        System.out.println("-----------------------------------------------------------------------");
         System.out.println("1.....Zahl prüfen");
         System.out.println("2.....Zahlen bis Limit ausgeben");
-        int count = 0;
-        while (count == 1 || count == 2) {
+        System.out.println("3.....Primadditionen");
+        System.out.println("0.....Beenden");
+        System.out.println("-----------------------------------------------------------------------");
+        int count = s.nextInt();
+        while (count != 1 && count != 2&&count!=3) {
+            System.out.println("Geben sie bitte eine Zahl von 1-2 ein");
             count = s.nextInt();
 
         }
@@ -42,15 +53,19 @@ public class EratosthenesPrimeSieve {
             printPrimes(toPrime(count));
         }
         System.out.println("Bitte geben Sie die zu Prüfende Zahl ein");
-
+        System.out.println("-----------------------------------------------------------------------");
+        if(count !=0)
+        {
+            showmenue();
+        }
+        
     }
 
     public static boolean prime(int number) {
-        if(number == 2||number == 3)
-        {
+        if (number == 2 || number == 3) {
             return true;
         }
-        if (number % 2 == 0&&number != 2) {
+        if (number % 2 == 0 && number != 2) {
             return false;
         }
         for (int i = 3; i * i <= number; i += 2) {
@@ -72,13 +87,14 @@ public class EratosthenesPrimeSieve {
             }
             if (counter == 2) {
                 //Appended the Prime number to the String
-                primeNumbers = primeNumbers + i + " ";
+                primeNumbers = primeNumbers + i + ", ";
             }
         }
+     
         return primeNumbers;
     }
-    public static String printPrimes(String primeNumbers)
-    {
+
+    public static void printPrimes(String primeNumbers) {
         System.out.println(primeNumbers);
     }
 
