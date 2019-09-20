@@ -53,7 +53,7 @@ public class EratosthenesPrimeSieve {
     
     public static boolean prime(int number)
     {
-        return true;
+        return false;
     }
     public static void toPrime(int number)
     {
