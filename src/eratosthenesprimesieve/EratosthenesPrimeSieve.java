@@ -5,21 +5,57 @@
  */
 package eratosthenesprimesieve;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Flo
  */
 public class EratosthenesPrimeSieve {
-
+    static final Scanner s = new Scanner(System.in);
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("1.....Zahl prüfen");
+        System.out.println("2.....Zahlen bis Limit ausgeben");
+        int count = 0;
+        while(count == 1||count == 2)
+        {
+            count = s.nextInt();
+            
+            
+        }
+         
+        if(count == 1)
+        {
+            System.out.println("Geben sie die zu prüfende Zahl ein:");
+            count = s.nextInt();
+            if(prime(count))
+            {
+                System.out.println(count + " is a prime!");
+            }
+            else
+            {
+                System.out.println(count + " is not a prime!");
+            }
+            
+        }
+        else if(count == 2)
+        {
+            System.out.println("Geben sie die das Limit ein:");
+            count = s.nextInt();
+            toPrime(count);
+        }
+        System.out.println("Bitte geben Sie die zu Prüfende Zahl ein");
         
     }
     
-    public boolean Prime(int number)
+    public static boolean prime(int number)
+    {
+        return true;
+    }
+    public static void toPrime(int number)
     {
         
     }
